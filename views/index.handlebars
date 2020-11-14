@@ -1,0 +1,57 @@
+<!-- NEED TO UPDATE ENTIRE PAGE LEVERAGED CARLOS'S WORK -->
+
+
+<div class="container page-wrapper">
+    {{!-- Title --}}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img src="" id="title-img" alt="burger" />
+            <h1> Eat-Da-Burger! </h1>
+        </div>
+        {{!-- Left Column - Burger List --}}
+        <div class="col-md-6 text-center to-eat">
+            <h4>Burgers to Eat:</h4>
+            <div class="row">
+                {{#each burger_data}}
+                {{#unless this.devoured}}
+                <div class="col-md-8 text-left lists">
+                    <div>{{this.id}}. {{this.burger_name}}
+                    </div>
+
+                </div>
+                <div class="col-md-3 text-center">
+                    <form class="devour">
+                        <input type="hidden" class="burger_id" type="text" value={{this.id}}>
+                        <button type="submit" id="devour-btn" class="btn btn-danger">Eat Me!!</button>
+                    </form>
+                </div>
+                {{/unless}}
+                {{/each}}
+            </div>
+        </div>
+        {{!-- Right Column - Burgers Devoured --}}
+        <div class="col-md-6 text-center eaten">
+            <h4>Burgers Eaten:</h4>
+            {{#each burger_data}}
+            {{#if this.devoured}}
+            <input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+{{!-- Form to enter a burger --}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 text-center">
+            <form action="/burgers/create" method="POST">
+                <p>Enter a burger you want to eat and click the "Submit" button.</p>
+                <input type="text" class="form-control" name="burger_name" placeholder="Enter your favorite burger here!"
+                    value="" id="enter_text">
+                <br>
+                <button type="submit" class="btn btn-warning">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
