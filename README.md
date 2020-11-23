@@ -52,12 +52,12 @@ Pease refer to their site for more details of the terms of use permittable.
 
 * Homepage 
 
-<img src="public/images/burgerAppPic1.png" width="700px">
+<img src="public/assets/img/burgerAppPic1.png" width="700px">
 
 * Add a burger
 
-<img src="public/images/burgerAppPic2.png" width="700px">
+<img src="public/assets/img/burgerAppPic2.png" width="700px">
 
 * Eat a burger 
 
-<img src="public/images/burgerAppPic3.png" width="700px">
+<img src="public/assets/img/burgerAppPic3.png" width="700px">
