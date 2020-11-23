@@ -1,9 +1,9 @@
 /* THIS NEEDS UPDATED AS IT IS FROM THE SCHOOL REPO */
 
 body {
-  width: 99%;
-  height: 900px;
-  background-color: #fc6;
+  width: 80%;
+  height: 850px;
+  background-color: rgb(243, 243, 231);
 }
 
 #top-bar {
@@ -66,5 +66,5 @@ body {
 }
 
 h1 {
-  color: #f30;
+  color: rgb(221, 12, 12);
 }
